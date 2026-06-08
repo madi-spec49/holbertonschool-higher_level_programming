@@ -4,10 +4,7 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    list_states()
 
-
-def list_states():
     """Lists all states sorted by id"""
     username = sys.argv[1]
     password = sys.argv[2]
