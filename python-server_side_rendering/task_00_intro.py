@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tâche 0: Création d'un programme de templating simple
+ Création d'un programme de templating simple
 """
 
 import os
