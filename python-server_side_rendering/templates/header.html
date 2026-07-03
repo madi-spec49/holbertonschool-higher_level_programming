@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Application Flask</title>
+    <title>My Flask App</title>
     <style>
-        /* Styles optionnels pour une meilleure apparence */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -51,11 +50,11 @@
 </head>
 <body>
     <header>
-        <h1>Mon Application Flask</h1>
+        <h1>My Flask App</h1>
     </header>
     <nav>
-        <a href="{{ url_for('home') }}">Accueil</a>
-        <a href="{{ url_for('about') }}">À propos</a>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
         <a href="{{ url_for('contact') }}">Contact</a>
     </nav>
     <div class="container">
