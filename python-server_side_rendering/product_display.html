@@ -1,0 +1,37 @@
+cat > templates/product_display.html << 'EOF'
+{% include 'header.html' %}
+
+<h1>Product List</h1>
+
+{% if error %}
+    <div style="color: red; font-weight: bold; padding: 20px; background-color: #ffeeee; border: 1px solid red; border-radius: 5px;">
+        {{ error }}
+    </div>
+{% elif products %}
+    <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+        <thead>
+            <tr style="background-color: #4CAF50; color: white;">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price ($)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr style="{% if loop.index % 2 == 0 %}background-color: #f2f2f2;{% endif %}">
+                <td style="text-align: center;">{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.category }}</td>
+                <td style="text-align: right;">${{ "%.2f"|format(product.price) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p style="margin-top: 20px; font-style: italic;">Total products: {{ products|length }}</p>
+{% else %}
+    <p style="color: #666; font-style: italic;">No products available</p>
+{% endif %}
+
+{% include 'footer.html' %}
+EOF

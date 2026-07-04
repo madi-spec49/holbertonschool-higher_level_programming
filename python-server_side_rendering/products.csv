@@ -1,0 +1,7 @@
+cat > products.csv << 'EOF'
+id,name,category,price
+1,Laptop,Electronics,799.99
+2,Coffee Mug,Home Goods,15.99
+3,Smartphone,Electronics,599.99
+4,Desk Lamp,Home Goods,29.99
+EOF
